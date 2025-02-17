@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentification</title>
+    <link rel="stylesheet" href="style_login.css">
+</head>
+<body>
+<!-- En-tête commun -->
+<?php include 'includes/header.html'; ?>
+
+<!-- Contenu de la page -->
+<h1>Authentification</h1>
+
+<!-- Formulaire de connexion -->
+<form id="loginForm">
+    <label for="username">Nom d'utilisateur :</label>
+    <input type="text" id="username" required><br><br>
+
+    <label for="password">Mot de passe :</label>
+    <input type="password" id="password" required><br><br>
+
+    <input type="submit" value="Se connecter">
+</form>
+
+<!-- Pied de page commun -->
+<?php include 'includes/footer.html'; ?>
+
+<!-- Script JavaScript -->
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Empêcher la soumission du formulaire
+
+        // Vérifier les informations d'identification (remplacez ceci par votre logique d'authentification)
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Exemple de vérification d'authentification simple
+        if (username === 'admin' && password === 'admin') {
+            // Authentification réussie, stocker l'état d'authentification
+            localStorage.setItem('authenticated', 'true');
+            // Rediriger l'utilisateur vers admin.html
+            window.location.href = 'admin.html';
+        } else {
+            alert('Nom d\'utilisateur ou mot de passe incorrect.');
+        }
+    });
+</script>
+<div class="buttons-container">
+    <a href="index.html" class="button">Retour à l'accueil</a>
+</div>
+</body>
+</html>
