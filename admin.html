@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace administrateur</title>
+    <link rel="stylesheet" href="style_admin.css">
+</head>
+<body>
+<!-- En-tête commun -->
+<?php include 'includes/header.html'; ?>
+<div class="container">
+<!-- Contenu de la page -->
+<h1>Espace administrateur</h1>
+
+<!-- Vérification de l'authentification -->
+<script>
+    // Vérifiez si l'utilisateur est authentifié en consultant le stockage local
+    var authenticated = localStorage.getItem('authenticated');
+    if (!authenticated) {
+        // Redirigez l'utilisateur vers la page d'accueil si non authentifié
+        window.location.href = 'index.html';
+    }
+</script>
+
+<!-- Options pour gérer le contenu -->
+<h2>Gestion du contenu :</h2>
+<div class="buttons-container">
+    <a href="https://img.freepik.com/photos-gratuite/heureux-jeune-homme-affaires-souriant-pouce-air-isole-mur-blanc_231208-8181.jpg" class="button">Gérer le contenu du CV</a>
+    <a href="https://www.icegif.com/wp-content/uploads/noice-icegif-3.gif" class="button">Gérer le contenu de la page À propos</a>
+    <a href="index.html" class="button">Retour à l'accueil</a>
+</div>
+
+
+<!-- Script JavaScript -->
+<script>
+    // Obtenez le rôle de l'utilisateur à partir du stockage local (remplacez ceci par votre propre logique)
+    var role = 'administrateur'; // Remplacez ceci par le rôle de l'utilisateur récupéré depuis le stockage local
+
+    // Créez une fonction pour ajouter une option à la liste
+    function addOption(text, link) {
+        var optionsList = document.getElementById('optionsList');
+        var li = document.createElement('li');
+        var a = document.createElement('a');
+        a.href = link;
+        a.textContent = text;
+        li.appendChild(a);
+        optionsList.appendChild(li);
+    }
+</script>
+
+<!-- Pied de page commun -->
+<?php include 'includes/footer.html'; ?>
+</div>
+</body>
+</html>
