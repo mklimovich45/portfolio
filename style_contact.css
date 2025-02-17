@@ -1,0 +1,182 @@
+/* Réinitialisation des marges et des rembourrages pour assurer une cohérence */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Utilisation de la police Arial */
+}
+
+/* Ajout d'un espace entre le texte et le côté gauche de la page */
+body {
+    padding-left: 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* En-tête */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style des champs de formulaire */
+form {
+    max-width: 400px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+}
+
+/* Style des étiquettes des champs */
+label {
+    display: block; /* Afficher chaque étiquette sur une nouvelle ligne */
+    margin-bottom: 10px; /* Espace entre chaque étiquette */
+    font-weight: bold; /* Mettre en gras le texte de l'étiquette */
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Remplir la largeur disponible */
+    padding: 10px; /* Espace à l'intérieur du champ */
+    margin-bottom: 20px; /* Espace sous chaque champ */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition douce */
+}
+
+/* Style des champs de saisie lorsqu'ils sont en focus */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #007bff; /* Changement de couleur de la bordure */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Changement de couleur de l'ombre */
+}
+
+/* Style du bouton d'envoi */
+input[type="submit"] {
+    padding: 10px 20px; /* Espace à l'intérieur du bouton */
+    background-color: #007bff; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer */
+    transition: background-color 0.3s; /* Transition de couleur de fond */
+}
+
+/* Style du bouton d'envoi au survol */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Changement de couleur de fond */
+}
+
+
+/* Pied de page */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Photo de profil ronde */
+img {
+    border-radius: 50%;
+    display: block; /* Pour éviter l'espace supplémentaire sous l'image */
+    margin: 0 auto;
+}
+
+/* Séparations nettes entre les titres de niveau 2 */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+/* Liens */
+a {
+    color: #007bff; /* Bleu par défaut des liens */
+    text-decoration: none; /* Suppression du soulignement par défaut */
+}
+
+a:hover {
+    text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Boutons */
+.button, .login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover, .login-button:hover {
+    background-color: #0056b3;
+}
+
+/* Boutons du conteneur */
+.buttons-container {
+    text-align: center;
+}
+
+/* Liste */
+ul {
+    list-style-type: none; /* Suppression des puces par défaut */
+    padding-left: 20px;
+}
+
+/* Marges inférieures pour les éléments de liste */
+li {
+    margin-bottom: 5px;
+}
+/* Style pour centrer la carte dans un carré */
+.map-container {
+    width: 400px; /* Taille du carré */
+    height: 400px; /* Taille du carré */
+    margin: 0 auto;
+    margin-top: 20px; /* Espace au-dessus de la carte */
+    margin-bottom: 20px;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}

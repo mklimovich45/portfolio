@@ -1,0 +1,143 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Utilisation de la police Arial */
+}
+
+/* Ajout d'un espace entre le texte et le côté gauche de la page */
+body {
+    padding-left: 20px;
+    margin-bottom: 30px;
+    background-color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+h2   {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* En-tête */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style des champs de formulaire */
+form {
+    max-width: 400px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+}
+
+/* Style des étiquettes des champs */
+label {
+    display: block; /* Afficher chaque étiquette sur une nouvelle ligne */
+    margin-bottom: 10px; /* Espace entre chaque étiquette */
+    font-weight: bold; /* Mettre en gras le texte de l'étiquette */
+}
+
+/* Style du formulaire de connexion */
+#loginForm {
+    max-width: 400px; /* Largeur maximale du formulaire */
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+    padding: 20px; /* Espace à l'intérieur du formulaire */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Style des étiquettes des champs */
+label {
+    display: block; /* Afficher chaque étiquette sur une nouvelle ligne */
+    margin-bottom: 10px; /* Espace entre chaque étiquette */
+    font-weight: bold; /* Mettre en gras le texte de l'étiquette */
+}
+
+/* Style des champs de saisie */
+input[type="text"],
+input[type="password"] {
+    width: 60%; /* Remplir la largeur disponible */
+    padding: 10px; /* Espace à l'intérieur du champ */
+    margin-bottom: 0px; /* Espace sous chaque champ */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition douce */
+}
+
+/* Style des champs de saisie lorsqu'ils sont en focus */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Changement de couleur de la bordure */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Changement de couleur de l'ombre */
+}
+
+/* Style du bouton de soumission */
+input[type="submit"] {
+    padding: 10px 20px; /* Espace à l'intérieur du bouton */
+    background-color: #007bff; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer */
+    transition: background-color 0.3s; /* Transition de couleur de fond */
+}
+
+/* Style du bouton de soumission au survol */
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Changement de couleur de fond */
+}
+.button{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.button:hover{
+    background-color: #0056b3;
+}
+
+.buttons-container {
+    text-align: center; /* Centrer horizontalement le contenu */
+    margin-top: 20px; /* Espace au-dessus des boutons */
+}
+.button2{
+    display: inline-block;
+    padding: 0px 0px;
+    margin-top: 10px;
+    margin-right: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+.button2:hover{
+    background-color: #0056b3;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
