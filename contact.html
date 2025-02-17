@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactez Klimovich Matsvei</title>
+    <link rel="stylesheet" href="style_contact.css">
+    <!-- Inclure la bibliothèque JavaScript de Google Maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        #map { /* Style pour définir la taille de la carte */
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+<a href="login.html" class="login-button">Connexion</a>
+<?php include 'includes/header.html'; ?>
+<div class="container">
+<!-- Contenu de la page -->
+<h1>Contactez Klimovich Matsvei</h1>
+
+<!-- Formulaire de contact -->
+<h2>Formulaire de contact :</h2>
+<form action="traitement.php" method="post">
+    <label for="nom">Nom :</label>
+    <input type="text" id="nom" name="nom" required><br><br>
+
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="message">Message :</label><br>
+    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+    <input type="submit" value="Envoyer">
+</form>
+
+<!-- Coordonnées de contact -->
+<h2>Coordonnées de contact :</h2>
+<p><strong>Numéro de téléphone :</strong> +32492836887</p>
+<p><strong>Adresse :</strong> Rue de Voroux 58C, Juprelle</p>
+
+<!-- Carte Google Maps -->
+<h2>Localisation :</h2>
+<div class="map-container">
+    <div id="map"></div>
+</div>
+
+<!-- Pied de page commun -->
+<?php include 'includes/footer.html'; ?>
+
+<!-- Script pour afficher la carte OpenStreetMap -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script>
+    // Initialisation de la carte OpenStreetMap
+    var map = L.map('map').setView([50.714394, 5.531829], 15); // Coordonnées de votre résidence
+
+    // Ajout du calque OpenStreetMap à la carte
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+    }).addTo(map);
+
+    // Ajout d'un marqueur pour votre résidence
+    L.marker([50.714394, 5.531829]).addTo(map)
+        .bindPopup('Rue de Voroux 58C, Juprelle')
+        .openPopup();
+</script>
+
+<!-- Pied de page commun -->
+<?php include 'includes/footer.html'; ?>
+
+<!-- Initialisation de la carte Google Maps -->
+<script>
+    initMap();
+</script>
+<div class="buttons-container">
+    <!-- Bouton pour accéder à apropos.html -->
+    <a href="index.html" class="button">Accueil</a>
+
+    <!-- Bouton pour accéder à contact.html -->
+    <a href="apropos.html" class="button">À propos</a>
+</div>
+</div>
+</body>
+</html>
